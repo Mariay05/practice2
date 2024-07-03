@@ -22,7 +22,7 @@ class MainFragment : Fragment(R.layout.activity_main) {
                 findNavController().navigate(
                     R.id.action_mainFragment_to_proFileFragment,
                     args = ProFileFragment.bundle(
-                        email = etEmail.text.toString(),
+                        email = et.text.toString(),
                     )
                 )
             }
