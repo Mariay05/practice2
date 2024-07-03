@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HomeWork2</string>
+    <string name="send_button_text">Send</string>
+    <string name="main_screen">Main Screen</string>
+    <string name="profile_screen">ProFile Screen</string>
+    <string name="settings_screen">Settings Screen</string>
+    <string name="massege">Massege</string>
+
+</resources>
