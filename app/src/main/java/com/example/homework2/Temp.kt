@@ -1,7 +1,7 @@
 package com.example.homework2
 
-object CityRepository {
-    val cities: List<City> = listOf(
+object Temp {
+    val list: List<City> = listOf(
         City(
             id = 1,
             name = "Moscow",

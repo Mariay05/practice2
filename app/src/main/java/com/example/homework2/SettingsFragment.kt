@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.homework2.databinding.FragmentSettingsBinding
+import com.google.android.material.snackbar.Snackbar
 
 
 class SettingsFragment: Fragment(R.layout.fragment_settings) {
@@ -27,7 +28,14 @@ class SettingsFragment: Fragment(R.layout.fragment_settings) {
 
 
 private fun initAdapter() {
-    adapter = CityAdapter(CityRepository.cities)
+    adapter = CityAdapter(
+        list =CityRepository.cities,
+        glide = Glide.with(this),
+        onClick =   {
+            Snackbar.make(binding!!.root, it.url, Snackbar.LENGTH_LONG).show
+        }
+
+    )
 
     binding?.run {
         rvCity.adapter = adapter

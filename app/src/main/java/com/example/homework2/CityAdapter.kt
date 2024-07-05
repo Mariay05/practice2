@@ -6,15 +6,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.homework2.databinding.ItemCityBinding
 
 class CityAdapter(
-    private val list: List<City>
-): RecyclerView.Adapter<CityHolder>() {
+    private val list: List<City>,
+    private val glide: RequestManager,
+    private val onClick: (City) -> Unit,
+    ): RecyclerView.Adapter<CityHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CityHolder {
         return CityHolder(
-            ItemCityBinding.inflate(
+            binding = ItemCityBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ),
+            glide = glide,
+            onClick = onClick,
         )
     }
 
